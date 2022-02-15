@@ -1,8 +1,10 @@
-package com.sole.restfulwebservice;
+package com.sole.restfulwebservice.helloworld;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.sole.restfulwebservice.HelloWorldBean;
 
 @RestController
 public class HelloWorldController {
