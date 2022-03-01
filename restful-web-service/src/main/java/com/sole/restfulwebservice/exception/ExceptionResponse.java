@@ -2,6 +2,14 @@ package com.sole.restfulwebservice.exception;
 
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+//예외처리를 하기위해서 생성
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ExceptionResponse {
 	private Date timestamp;
 	private String message;
