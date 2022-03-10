@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+ <title>zaritalk</title>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+<!-- <div th:replace="fragments/bodyHeader :: bodyHeader" />-->
+ <div class="jumbotron">
+ <h1>자리톡 커뮤니티 목록</h1>
+ <p>
+ <a class="btn btn-lg btn-secondary" href="/join">회원 가입</a>
+  <a class="btn btn-lg btn-secondary" href="/write">글쓰기</a>
+ </p>
+
+ </div>
+ 
+ <div id="toolbar">
+        </div>
+		<div class="row-fluid" style="padding-left:100px;">
+			<div class="span8">
+			
+				<table id="table" class="table table-striped">
+					<colgroup>
+						<col style="width: 80px;">     <!--id-->
+						<col style="width: 200px;"/>   <!--email-->
+						<col style="width: 80px;"/>    <!--enabled-->
+						<col style="width: 160px;"/>   <!--createDT-->
+					</colgroup>
+					<thead>
+					<tr>
+						<th>아이디</th>
+						<th>닉네임</th>
+						<th>타입</th>
+						<th>글 내용</th>
+					</tr>
+					</thead>
+				    <tr class="link_btn" th:each="user : ${users}">
+						<td style="text-align: left;" th:text="${user.id}">
+						</td>
+						<td style="text-align: left;" th:text="${user.nickname}"></td>
+						<td style="text-align: left;" th:text="${user.account_type}"></td>
+						<td style="text-align: left;" th:text="${user.write}"></td>
+				    </tr>
+				</table>
+ 			</div>
+		</div>
+		
+</body>
+</html>
+<!-- <div th:replace="fragments/footer :: footer" />-->
